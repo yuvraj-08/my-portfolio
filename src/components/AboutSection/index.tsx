@@ -104,10 +104,10 @@ export default function AboutSection() {
     <section
       ref={sectionRef}
       id="about"
-      className="relative py-20 md:py-32 overflow-hidden"
+      className="relative py-20 md:py-32 "
     >
       {/* Background elements */}
-      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none ">
         <div className="absolute -left-40 top-20 w-80 h-80 rounded-full bg-purple-500 opacity-10 blur-3xl"></div>
         <div className="absolute right-0 bottom-0 w-96 h-96 rounded-full bg-blue-500 opacity-10 blur-3xl"></div>
       </div>

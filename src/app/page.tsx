@@ -1,4 +1,4 @@
-import { AboutSection, HeroSection } from "@/components";
+import { AboutSection, ContactCTA, FeaturedProjects, HeroSection, SkillsExpertise } from "@/components";
 
 export default function Home() {
   return (
@@ -6,6 +6,9 @@ export default function Home() {
      <HeroSection/>
      {/* <div className="w-full h-28"></div> */}
      <AboutSection/>
+     <FeaturedProjects/>
+     <SkillsExpertise />
+     <ContactCTA />
     </div>
   );
 }
