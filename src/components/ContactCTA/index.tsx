@@ -93,7 +93,7 @@ export default function ContactCTA() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 md:py-28"
+      className="relative py-20 md:py-28 bg-gradient-to-b from-slate-900 to-slate-950 overflow-hidden"
     >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">

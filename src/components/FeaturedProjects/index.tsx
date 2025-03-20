@@ -124,7 +124,7 @@ export default function FeaturedProjects() {
   return (
     <section
       ref={sectionRef}
-      className="relative py-20 md:py-32 "
+      className="relative py-20 md:py-32"
     >
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -132,7 +132,7 @@ export default function FeaturedProjects() {
         <div className="absolute bottom-20 right-20 w-60 h-60 rounded-full bg-cyan-500 opacity-10 blur-3xl"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container max-w-[80%] mx-auto px-4 relative z-10">
         {/* Section heading */}
         <div ref={headingRef} className="text-center mb-16 md:mb-24">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
