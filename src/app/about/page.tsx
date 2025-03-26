@@ -343,7 +343,7 @@ export default function AboutPage() {
   return (
     <div
       ref={pageRef}
-      className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950"
+      className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 overflow-hidden"
     >
       {/* Introduction Section */}
       <section
