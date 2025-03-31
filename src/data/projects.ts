@@ -1,0 +1,98 @@
+export const projects = [
+  {
+    id: 1,
+    title: "To-Do List",
+    description:
+      "A simple to-do list application that utilizes local storage to retain tasks even after the page is closed or reloaded.",
+    image: "/placeholder.svg?height=600&width=800",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    category: "Basic",
+    demoUrl: "https://yuvraj08-netweb.github.io/toDo-List/",
+    githubUrl: "https://github.com/yuvraj08-netweb/toDo-List",
+    featured: false,
+  },
+  {
+    id: 2,
+    title: "Sign-In Page Template",
+    description:
+      "A responsive sign-in page built with Tailwind CSS. Includes form validation and local storage to retain user data upon submission.",
+    image: "/placeholder.svg?height=600&width=800",
+    technologies: ["HTML", "Tailwind CSS", "JavaScript"],
+    category: "Basic",
+    demoUrl: "https://yuvraj08-netweb.github.io/signInTemplate/",
+    githubUrl: "https://github.com/yuvraj08-netweb/signInTemplate",
+    featured: false,
+  },
+  {
+    id: 3,
+    title: "Guess The Number Game",
+    description:
+      "A simple number-guessing game where the user tries to match a randomly generated number.",
+    image: "/placeholder.svg?height=600&width=800",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    category: "Basic",
+    demoUrl: "https://yuvraj08-netweb.github.io/guessTheNumberGame/",
+    githubUrl: "https://github.com/yuvraj08-netweb/guessTheNumberGame",
+    featured: false,
+  },
+  {
+    id: 4,
+    title: "Travel Website Landing Page",
+    description:
+      "A beautifully designed travel website landing page, showcasing destinations and offers.",
+    image: "/placeholder.svg?height=600&width=800",
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+    category: "Basic",
+    demoUrl: "https://yuvraj08-netweb.github.io/travel-website-landing-page/",
+    githubUrl: "https://github.com/yuvraj08-netweb/travel-website-landing-page",
+    featured: false,
+  },
+  {
+    id: 5,
+    title: "Envor Landing Page",
+    description:
+      "A modern and responsive landing page designed for an environmental company.",
+    image: "/placeholder.svg?height=600&width=800",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    category: "Basic",
+    demoUrl: "https://yuvraj08-netweb.github.io/Envor-Landing-Page/",
+    githubUrl: "https://github.com/yuvraj08-netweb/Envor-Landing-Page",
+    featured: false,
+  },
+  {
+    id: 6,
+    title: "Hydra Landing Page",
+    description:
+      "A sleek and interactive landing page with a modern design and smooth animations.",
+    image: "/placeholder.svg?height=600&width=800",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    category: "Basic",
+    demoUrl: "https://yuvraj08-netweb.github.io/Hydra-Landing-Page/",
+    githubUrl: "https://github.com/yuvraj08-netweb/Hydra-Landing-Page",
+    featured: false,
+  },
+  {
+    id: 7,
+    title: "Quiz App",
+    description:
+      "An interactive quiz application with multiple-choice questions, tracking user scores dynamically.",
+    image: "/placeholder.svg?height=600&width=800",
+    technologies: ["HTML", "CSS", "JavaScript", "JSON"],
+    category: "Intermediate",
+    demoUrl: "https://yuvraj08-netweb.github.io/quizApp/",
+    githubUrl: "https://github.com/yuvraj08-netweb/quizApp",
+    featured: false,
+  },
+  {
+    id: 8,
+    title: "Random Password Generator",
+    description:
+      "A React-based password generator using hooks like useState, useEffect, useCallback, and useRef to generate secure passwords.",
+    image: "/placeholder.svg?height=600&width=800",
+    technologies: ["React", "Tailwind CSS"],
+    category: "Intermediate",
+    demoUrl: "https://yuvraj-password-generator.netlify.app/",
+    githubUrl: "https://github.com/yuvraj08-netweb/passwordGenerator",
+    featured: false,
+  },
+];

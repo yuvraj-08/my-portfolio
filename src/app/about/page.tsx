@@ -912,7 +912,7 @@ export default function AboutPage() {
       </section>
 
       {/* Call-to-Action Section */}
-      <section ref={ctaRef} className="relative py-20 md:py-24">
+      <section ref={ctaRef} className="relative pt-24 pb-28">
         <div className="container max-w-6xl mx-auto px-4">
           <div className="cta-content text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
