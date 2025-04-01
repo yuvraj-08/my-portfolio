@@ -16,24 +16,14 @@ import {
 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { IProject, projects } from "@/data/projects";
 
 // Register GSAP plugins
 if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-// Project type definition
-type Project = {
-  id: number;
-  title: string;
-  description: string;
-  image: string;
-  technologies: string[];
-  category: string;
-  demoUrl: string;
-  githubUrl: string;
-  featured: boolean;
-};
+
 
 // Technology categories for filtering
 const techCategories = [
@@ -51,252 +41,8 @@ const techCategories = [
   { name: "API", icon: "🔌" },
 ];
 
-// Sample projects data - replace with your actual projects
-const projectsData: Project[] = [
-  {
-    id: 1,
-    title: "E-Commerce Dashboard",
-    description:
-      "A comprehensive dashboard for e-commerce businesses with real-time analytics, inventory management, and sales tracking.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-    category: "Dashboard",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: true,
-  },
-  {
-    id: 2,
-    title: "AI Content Generator",
-    description:
-      "An AI-powered application that generates high-quality content for blogs, social media, and marketing materials.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "Node.js", "OpenAI API", "MongoDB"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: true,
-  },
-  {
-    id: 3,
-    title: "Fitness Tracking App",
-    description:
-      "A mobile-first web application for tracking workouts, nutrition, and fitness goals with personalized recommendations.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "TypeScript", "Firebase", "Chart.js"],
-    category: "Mobile",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: true,
-  },
-  {
-    id: 4,
-    title: "Portfolio Website",
-    description:
-      "A modern portfolio website built with Next.js and Tailwind CSS, featuring smooth animations and responsive design.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "GSAP"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 5,
-    title: "Real Estate Listing Platform",
-    description:
-      "A platform for real estate listings with search, filtering, and user authentication features.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "Firebase", "Google Maps API", "Styled Components"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 6,
-    title: "Task Management System",
-    description:
-      "A collaborative task management system with real-time updates, notifications, and team features.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
-    category: "Dashboard",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 7,
-    title: "Weather Forecast App",
-    description:
-      "A weather forecast application with location detection, 7-day forecasts, and interactive maps.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "JavaScript", "Weather API", "CSS"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 8,
-    title: "E-commerce Store",
-    description:
-      "A fully functional e-commerce store with product listings, cart functionality, and payment processing.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "TypeScript", "Stripe API", "Tailwind CSS"],
-    category: "E-commerce",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 9,
-    title: "Social Media Dashboard",
-    description:
-      "A dashboard for managing and analyzing social media accounts across multiple platforms.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "Node.js", "Social Media APIs", "Chart.js"],
-    category: "Dashboard",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 10,
-    title: "3D Product Configurator",
-    description:
-      "An interactive 3D product configurator allowing users to customize products in real-time.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "Three.js", "JavaScript", "WebGL"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 11,
-    title: "Recipe Sharing Platform",
-    description:
-      "A platform for sharing and discovering recipes with search, filtering, and user profiles.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "Firebase", "Tailwind CSS", "JavaScript"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 12,
-    title: "Interactive Data Visualization",
-    description:
-      "Interactive data visualizations for complex datasets using D3.js and React.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "D3.js", "TypeScript", "CSS"],
-    category: "Dashboard",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 13,
-    title: "Mobile Banking App",
-    description:
-      "A mobile banking application with secure authentication, transaction history, and payment features.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React Native", "TypeScript", "API Integration", "Redux"],
-    category: "Mobile",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 14,
-    title: "Booking System",
-    description:
-      "An appointment booking system for businesses with calendar integration and automated reminders.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "Node.js", "MongoDB", "Tailwind CSS"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 15,
-    title: "Cryptocurrency Dashboard",
-    description:
-      "A real-time cryptocurrency dashboard with price tracking, portfolio management, and alerts.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "Crypto APIs", "Chart.js", "Styled Components"],
-    category: "Dashboard",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 16,
-    title: "Learning Management System",
-    description:
-      "A learning management system for online courses with video lessons, quizzes, and progress tracking.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "TypeScript", "Supabase", "Tailwind CSS"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 17,
-    title: "AR Product Viewer",
-    description:
-      "An augmented reality product viewer allowing users to see products in their own space.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "AR.js", "Three.js", "JavaScript"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 18,
-    title: "Travel Planner",
-    description:
-      "A travel planning application with itinerary creation, map integration, and booking features.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "Google Maps API", "Firebase", "Tailwind CSS"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 19,
-    title: "Music Streaming App",
-    description:
-      "A music streaming application with playlist creation, artist profiles, and audio visualization.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "Node.js", "MongoDB", "Web Audio API"],
-    category: "Web App",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-  {
-    id: 20,
-    title: "Inventory Management System",
-    description:
-      "An inventory management system for businesses with barcode scanning, stock alerts, and reporting.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "TypeScript", "Supabase", "Chart.js"],
-    category: "Dashboard",
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: false,
-  },
-];
-
 // ProjectCard component with isolated hover state
-const ProjectCard = ({ project }: { project: Project }) => {
+const ProjectCard = ({ project }: { project: IProject }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -440,7 +186,7 @@ export default function ProjectsPage() {
   };
 
   // Filter projects based on selected technologies, category, and search query
-  const filteredProjects = projectsData.filter((project) => {
+  const filteredProjects = projects.filter((project) => {
     // Filter by selected technologies
     const techMatch =
       selectedTech.length === 0 ||
@@ -830,25 +576,25 @@ export default function ProjectsPage() {
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-2">
-                  {projectsData.length}+
+                  {projects.length}+
                 </div>
                 <div className="text-slate-300">Total Projects</div>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-2">
-                  {projectsData.filter((p) => p.featured).length}
+                  {projects.filter((p) => p.featured).length}
                 </div>
                 <div className="text-slate-300">Featured Projects</div>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-2">
-                  {new Set(projectsData.flatMap((p) => p.technologies)).size}
+                  {new Set(projects.flatMap((p) => p.technologies)).size}
                 </div>
                 <div className="text-slate-300">Technologies</div>
               </div>
               <div className="bg-slate-800/50 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400 mb-2">
-                  {new Set(projectsData.map((p) => p.category)).size}
+                  {new Set(projects.map((p) => p.category)).size}
                 </div>
                 <div className="text-slate-300">Categories</div>
               </div>
