@@ -25,38 +25,38 @@ type ProjectType = {
 
 // Sample project data - replace with your actual projects
 const projects: ProjectType[] = [
-  {
+   {
     id: 1,
-    title: "E-Commerce Dashboard",
+    title: "VibeMesh Chat Platform",
     description:
-      "A comprehensive dashboard for e-commerce businesses with real-time analytics, inventory management, and sales tracking.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
+      "A comprehensive real-time chat platform designed for seamless communication with intuitive UI, user authentication, and message persistence. Features include user profiles, real-time notifications, and responsive design.",
+    image: "/assets/projects/no-image.jpg",
+    technologies: ["React", "Tailwind CSS", "Firebase", "Yup", "AOS"],
+    demoUrl: "https://vibemesh08.netlify.app/",
+    githubUrl: "https://github.com/yuvraj08-netweb/VibeMesh",
     featured: true,
   },
   {
     id: 2,
-    title: "AI Content Generator",
+    title: "Travel Website Landing Page",
     description:
-      "An AI-powered application that generates high-quality content for blogs, social media, and marketing materials.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["React", "Node.js", "OpenAI API", "MongoDB"],
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: true,
+      "A visually stunning travel website landing page with animated sections, booking forms, and destination showcases. Features responsive design and interactive elements.",
+    image: "/assets/projects/travel-website-ui.png",
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS"],
+    demoUrl: "https://yuvraj08-netweb.github.io/travel-website-landing-page/",
+    githubUrl: "https://github.com/yuvraj08-netweb/travel-website-landing-page",
+    featured: false,
   },
   {
     id: 3,
-    title: "Fitness Tracking App",
+    title: "Hydra Landing Page",
     description:
-      "A mobile-first web application for tracking workouts, nutrition, and fitness goals with personalized recommendations.",
-    image: "/placeholder.svg?height=600&width=800",
-    technologies: ["Next.js", "TypeScript", "Firebase", "Chart.js"],
-    demoUrl: "https://example.com/demo",
-    githubUrl: "https://github.com/yourusername/project",
-    featured: true,
+      "A modern VR technology landing page with parallax effects, service showcases, and contact forms. Features smooth scrolling and responsive design elements.",
+    image: "/assets/projects/hydra-landing-page-ui.png",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    demoUrl: "https://yuvraj08-netweb.github.io/Hydra-Landing-Page/",
+    githubUrl: "https://github.com/yuvraj08-netweb/Hydra-Landing-Page",
+    featured: false,
   },
 ];
 

@@ -127,7 +127,7 @@ export default function ContactCTA() {
           {/* Social Links */}
           <div ref={socialLinksRef} className="flex justify-center gap-8">
             <Link
-              href="https://linkedin.com/in/yourusername"
+              href="https://www.linkedin.com/in/-yuvraj08/"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex flex-col items-center gap-2 text-slate-300 hover:text-white transition-colors"

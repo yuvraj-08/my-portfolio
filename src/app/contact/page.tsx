@@ -549,7 +549,7 @@ export default function ContactPage() {
                   </Link>
 
                   <Link
-                    href="https://linkedin.com/in/yourusername"
+                    href="https://www.linkedin.com/in/-yuvraj08/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-item group flex flex-col items-center gap-3 p-4 rounded-lg bg-slate-800/70 hover:bg-slate-700/70 border border-slate-700 transition-all"

@@ -18,6 +18,42 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { RiGithubLine } from "@remixicon/react";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaReact,
+  FaNodeJs,
+  FaJava,
+  FaCogs,
+  FaRobot,
+  FaLayerGroup,
+  FaGithub,
+  FaGitAlt,
+  FaPaw,
+  FaCode,
+} from "react-icons/fa";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiTailwindcss,
+  SiBootstrap,
+  SiAntdesign,
+  SiFirebase,
+  SiSupabase,
+  SiPrisma,
+  SiMongodb,
+  SiExpress,
+  SiAmazon,
+  SiJavascript,
+  SiRedux,
+  SiPostgresql,
+  SiMysql,
+  SiVercel,
+  SiNetlify,
+  SiPostman,
+  SiDbeaver,
+  SiCloudinary,
+} from "react-icons/si";
 
 // Register GSAP plugins
 if (typeof window !== "undefined") {
@@ -40,53 +76,251 @@ export default function AboutPage() {
 
   // Tech stack data
   const techStack = [
+    // Frontend
+    {
+      name: "HTML",
+      icon: <FaHtml5 />,
+      color: "#E34F26",
+      bgColor: "rgba(227, 79, 38, 0.1)",
+      category: "Frontend",
+    },
+    {
+      name: "CSS",
+      icon: <FaCss3Alt />,
+      color: "#1572B6",
+      bgColor: "rgba(21, 114, 182, 0.1)",
+      category: "Frontend",
+    },
+    {
+      name: "JavaScript",
+      icon: <SiJavascript />,
+      color: "#F7DF1E",
+      bgColor: "rgba(247, 223, 30, 0.1)",
+      category: "Frontend",
+    },
     {
       name: "React",
-      icon: "⚛️",
+      icon: <FaReact />,
       color: "#61DAFB",
       bgColor: "rgba(97, 218, 251, 0.1)",
+      category: "Frontend",
     },
     {
       name: "Next.js",
-      icon: "▲",
-      color: "#ffffff",
-      bgColor: "rgba(255, 255, 255, 0.1)",
+      icon: <SiNextdotjs />,
+      color: "#000000",
+      bgColor: "rgba(0, 0, 0, 0.1)",
+      category: "Frontend",
     },
     {
       name: "TypeScript",
-      icon: "TS",
+      icon: <SiTypescript />,
       color: "#3178C6",
       bgColor: "rgba(49, 120, 198, 0.1)",
+      category: "Frontend",
     },
     {
-      name: "Tailwind",
-      icon: "🌊",
+      name: "Tailwind CSS",
+      icon: <SiTailwindcss />,
       color: "#38B2AC",
       bgColor: "rgba(56, 178, 172, 0.1)",
+      category: "Frontend",
     },
     {
-      name: "GSAP",
-      icon: "🔄",
-      color: "#88CE02",
-      bgColor: "rgba(136, 206, 2, 0.1)",
+      name: "Bootstrap",
+      icon: <SiBootstrap />,
+      color: "#7952B3",
+      bgColor: "rgba(121, 82, 179, 0.1)",
+      category: "Frontend",
+    },
+    {
+      name: "Ant Design",
+      icon: <SiAntdesign />,
+      color: "#1677FF",
+      bgColor: "rgba(22, 119, 255, 0.1)",
+      category: "Frontend",
+    },
+    {
+      name: "Material UI",
+      icon: <FaLayerGroup />,
+      color: "#007FFF",
+      bgColor: "rgba(0, 127, 255, 0.1)",
+      category: "Frontend",
+    },
+    {
+      name: "Refine.dev",
+      icon: <FaCogs />,
+      color: "#2F54EB",
+      bgColor: "rgba(47, 84, 235, 0.1)",
+      category: "Frontend",
+    },
+
+    // State Management
+    {
+      name: "Redux",
+      icon: <SiRedux />,
+      color: "#764ABC",
+      bgColor: "rgba(118, 74, 188, 0.1)",
+      category: "State Management",
+    },
+    {
+      name: "Zustand",
+      icon: <FaPaw />,
+      color: "#000000",
+      bgColor: "rgba(0, 0, 0, 0.1)",
+      category: "State Management",
+    },
+
+    // Backend
+    {
+      name: "Node.js",
+      icon: <FaNodeJs />,
+      color: "#339933",
+      bgColor: "rgba(51, 153, 51, 0.1)",
+      category: "Backend",
+    },
+    {
+      name: "Express.js",
+      icon: <SiExpress />,
+      color: "#000000",
+      bgColor: "rgba(0, 0, 0, 0.1)",
+      category: "Backend",
+    },
+    {
+      name: "Java",
+      icon: <FaJava />,
+      color: "#007396",
+      bgColor: "rgba(0, 115, 150, 0.1)",
+      category: "Backend",
     },
     {
       name: "Firebase",
-      icon: "🔥",
+      icon: <SiFirebase />,
       color: "#FFCA28",
       bgColor: "rgba(255, 202, 40, 0.1)",
+      category: "Backend",
     },
     {
       name: "Supabase",
-      icon: "⚡",
+      icon: <SiSupabase />,
       color: "#3ECF8E",
       bgColor: "rgba(62, 207, 142, 0.1)",
+      category: "Backend",
     },
     {
-      name: "Node.js",
-      icon: "🟢",
-      color: "#339933",
-      bgColor: "rgba(51, 153, 51, 0.1)",
+      name: "Prisma ORM",
+      icon: <SiPrisma />,
+      color: "#0C344B",
+      bgColor: "rgba(12, 52, 75, 0.1)",
+      category: "Backend",
+    },
+
+    // Databases
+    {
+      name: "MongoDB",
+      icon: <SiMongodb />,
+      color: "#47A248",
+      bgColor: "rgba(71, 162, 72, 0.1)",
+      category: "Database",
+    },
+    {
+      name: "MongoDB Atlas",
+      icon: <SiMongodb />,
+      color: "#47A248",
+      bgColor: "rgba(71, 162, 72, 0.1)",
+      category: "Database",
+    },
+    {
+      name: "PostgreSQL",
+      icon: <SiPostgresql />,
+      color: "#4169E1",
+      bgColor: "rgba(65, 105, 225, 0.1)",
+      category: "Database",
+    },
+    {
+      name: "MySQL",
+      icon: <SiMysql />,
+      color: "#4479A1",
+      bgColor: "rgba(68, 121, 161, 0.1)",
+      category: "Database",
+    },
+    {
+      name: "DBeaver",
+      icon: <SiDbeaver />,
+      color: "#372923",
+      bgColor: "rgba(55, 41, 35, 0.1)",
+      category: "Database",
+    },
+
+    // Deployment/Cloud
+    {
+      name: "Vercel",
+      icon: <SiVercel />,
+      color: "#000000",
+      bgColor: "rgba(0, 0, 0, 0.1)",
+      category: "Cloud/Deployment",
+    },
+    {
+      name: "Netlify",
+      icon: <SiNetlify />,
+      color: "#00C7B7",
+      bgColor: "rgba(0, 199, 183, 0.1)",
+      category: "Cloud/Deployment",
+    },
+    {
+      name: "AWS Basics",
+      icon: <SiAmazon />,
+      color: "#FF9900",
+      bgColor: "rgba(255, 153, 0, 0.1)",
+      category: "Cloud/Deployment",
+    },
+
+    // Dev Tools
+    {
+      name: "Git",
+      icon: <FaGitAlt />,
+      color: "#F05032",
+      bgColor: "rgba(240, 80, 50, 0.1)",
+      category: "Dev Tools",
+    },
+    {
+      name: "GitHub",
+      icon: <FaGithub />,
+      color: "#181717",
+      bgColor: "rgba(24, 23, 23, 0.1)",
+      category: "Dev Tools",
+    },
+    {
+      name: "Postman",
+      icon: <SiPostman />,
+      color: "#FF6C37",
+      bgColor: "rgba(255, 108, 55, 0.1)",
+      category: "Dev Tools",
+    },
+    {
+      name: "VS Code",
+      icon: <FaCode />,
+      color: "#007ACC",
+      bgColor: "rgba(0, 122, 204, 0.1)",
+      category: "Dev Tools",
+    },
+
+    // AI Tools
+    {
+      name: "Prompt Engineering",
+      icon: <FaRobot />,
+      color: "#6E56CF",
+      bgColor: "rgba(110, 86, 207, 0.1)",
+      category: "AI Tools",
+    },
+
+    // Media/Assets
+    {
+      name: "Cloudinary",
+      icon: <SiCloudinary />,
+      color: "#3448C5",
+      bgColor: "rgba(52, 72, 197, 0.1)",
+      category: "Media/Assets",
     },
   ];
 
@@ -389,7 +623,7 @@ export default function AboutPage() {
                   <span className="sr-only">GitHub</span>
                 </Link>
                 <Link
-                  href="https://linkedin.com/in/yourusername"
+                  href="https://www.linkedin.com/in/-yuvraj08/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon text-slate-400 hover:text-white transition-colors"
@@ -662,80 +896,89 @@ export default function AboutPage() {
             Skills & Technologies
           </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 perspective-1000">
-            {techStack.map((tech) => (
-              <div
-                key={tech.name}
-                className="tech-item relative h-40 cursor-pointer transform-style-3d transition-transform duration-500"
-                style={{
-                  transform:
-                    hoveredTech === tech.name
-                      ? "rotateY(15deg) rotateX(-10deg)"
-                      : "rotateY(0) rotateX(0)",
-                  transformStyle: "preserve-3d",
-                }}
-                onMouseEnter={() => setHoveredTech(tech.name)}
-                onMouseLeave={() => setHoveredTech(null)}
-              >
-                <div
-                  className="absolute inset-0 rounded-xl border border-slate-700 bg-slate-800/50 backdrop-blur-sm flex flex-col items-center justify-center p-4 transform-style-3d"
-                  style={{
-                    backfaceVisibility: "hidden",
-                    transform: "translateZ(0px)",
-                  }}
-                >
-                  <div
-                    className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl mb-4"
-                    style={{ backgroundColor: tech.bgColor }}
-                  >
-                    {tech.icon}
-                  </div>
-                  <span className="text-white font-medium text-lg">
-                    {tech.name}
-                  </span>
+          {Array.from(new Set(techStack.map((t) => t.category))).map(
+            (category) => (
+              <div key={category} className="mb-12">
+                <h3 className="text-2xl font-semibold text-white mb-6">
+                  {category}
+                </h3>
+                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 perspective-1000">
+                  {techStack
+                    .filter((tech) => tech.category === category)
+                    .map((tech) => (
+                      <div
+                        key={tech.name}
+                        className="tech-item relative h-40 cursor-pointer transform-style-3d transition-transform duration-500"
+                        style={{
+                          transform:
+                            hoveredTech === tech.name
+                              ? "rotateY(15deg) rotateX(-10deg)"
+                              : "rotateY(0) rotateX(0)",
+                          transformStyle: "preserve-3d",
+                        }}
+                        onMouseEnter={() => setHoveredTech(tech.name)}
+                        onMouseLeave={() => setHoveredTech(null)}
+                      >
+                        <div
+                          className="absolute inset-0 rounded-xl border border-slate-700 bg-slate-800/50 backdrop-blur-sm flex flex-col items-center justify-center p-4 transform-style-3d"
+                          style={{
+                            backfaceVisibility: "hidden",
+                            transform: "translateZ(0px)",
+                          }}
+                        >
+                          <div
+                            className="w-16 h-16 rounded-xl flex items-center justify-center text-3xl mb-4"
+                            style={{ backgroundColor: tech.bgColor }}
+                          >
+                            {tech.icon}
+                          </div>
+                          <span className="text-white font-medium text-lg">
+                            {tech.name}
+                          </span>
+                        </div>
+
+                        <div
+                          className="absolute inset-0 rounded-xl bg-slate-900/80"
+                          style={{
+                            transform: "translateZ(-20px)",
+                            filter: "blur(8px)",
+                            opacity: hoveredTech === tech.name ? 0.6 : 0.3,
+                            transition: "opacity 0.5s ease",
+                          }}
+                        ></div>
+
+                        <div
+                          className="absolute w-8 h-8 rounded-full"
+                          style={{
+                            backgroundColor: tech.bgColor,
+                            top: "10%",
+                            right: "15%",
+                            transform: `translateZ(${
+                              hoveredTech === tech.name ? 30 : 15
+                            }px)`,
+                            opacity: 0.6,
+                            transition: "transform 0.5s ease",
+                          }}
+                        ></div>
+                        <div
+                          className="absolute w-4 h-4 rounded-full"
+                          style={{
+                            backgroundColor: tech.bgColor,
+                            bottom: "20%",
+                            left: "15%",
+                            transform: `translateZ(${
+                              hoveredTech === tech.name ? 40 : 20
+                            }px)`,
+                            opacity: 0.4,
+                            transition: "transform 0.5s ease",
+                          }}
+                        ></div>
+                      </div>
+                    ))}
                 </div>
-
-                {/* 3D shadow effect */}
-                <div
-                  className="absolute inset-0 rounded-xl bg-slate-900/80"
-                  style={{
-                    transform: "translateZ(-20px)",
-                    filter: "blur(8px)",
-                    opacity: hoveredTech === tech.name ? 0.6 : 0.3,
-                    transition: "opacity 0.5s ease",
-                  }}
-                ></div>
-
-                {/* Floating elements for 3D effect */}
-                <div
-                  className="absolute w-8 h-8 rounded-full"
-                  style={{
-                    backgroundColor: tech.bgColor,
-                    top: "10%",
-                    right: "15%",
-                    transform: `translateZ(${
-                      hoveredTech === tech.name ? 30 : 15
-                    }px)`,
-                    opacity: 0.6,
-                    transition: "transform 0.5s ease",
-                  }}
-                ></div>
-                <div
-                  className="absolute w-4 h-4 rounded-full"
-                  style={{
-                    backgroundColor: tech.bgColor,
-                    bottom: "20%",
-                    left: "15%",
-                    transform: `translateZ(${
-                      hoveredTech === tech.name ? 40 : 20
-                    }px)`,
-                    opacity: 0.4,
-                    transition: "transform 0.5s ease",
-                  }}
-                ></div>
               </div>
-            ))}
-          </div>
+            )
+          )}
         </div>
       </section>
 

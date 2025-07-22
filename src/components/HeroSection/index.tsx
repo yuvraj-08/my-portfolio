@@ -11,6 +11,47 @@ import {
   RiMailSendLine,
 } from "@remixicon/react";
 
+// Dark Veil Background Component (from React Bits)
+const DarkVeil = ({ className = "" }) => {
+  return (
+    <div className={`absolute inset-0 ${className}`}>
+      {/* Base gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-800"></div>
+      
+      {/* Animated veil effects */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Floating particles */}
+        {[...Array(20)].map((_, i) => (
+          <div
+            key={i}
+            className="absolute w-1 h-1 bg-white/10 rounded-full animate-pulse"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              animationDuration: `${2 + Math.random() * 4}s`,
+            }}
+          />
+        ))}
+        
+        {/* Larger glowing orbs */}
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-purple-500/10 rounded-full blur-xl animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-blue-500/10 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+        <div className="absolute top-1/2 left-1/2 w-40 h-40 bg-cyan-500/5 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        
+        {/* Veil overlay with subtle pattern */}
+        <div className="absolute inset-0 opacity-30" 
+             style={{
+               backgroundImage: `radial-gradient(circle at 25% 25%, rgba(139, 92, 246, 0.1) 0%, transparent 25%),
+                                radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.1) 0%, transparent 25%),
+                                radial-gradient(circle at 50% 50%, rgba(34, 211, 238, 0.05) 0%, transparent 50%)`
+             }}>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 export default function HeroSection() {
   // Refs for GSAP animations
   const containerRef = useRef<HTMLDivElement>(null);
@@ -115,14 +156,10 @@ export default function HeroSection() {
   return (
     <div
       ref={containerRef}
-      className="relative min-h-screen flex flex-col justify-center  text-white overflow-x-clip"
+      className="relative min-h-screen flex flex-col justify-center text-white overflow-x-clip"
     >
-      {/* Background elements */}
-      <div className="absolute inset-0 ">
-        <div className="absolute -top-40 -right-40 w-80 h-80 rounded-full bg-purple-500 opacity-20 blur-3xl"></div>
-        <div className="absolute top-1/2 left-1/4 w-60 h-60 rounded-full bg-blue-500 opacity-20 blur-3xl"></div>
-        <div className="absolute -bottom-20 left-20 w-72 h-72 rounded-full bg-cyan-500 opacity-20 blur-3xl"></div>
-      </div>
+      {/* Dark Veil Background - replaces the old background elements */}
+      <DarkVeil />
 
       {/* Content container */}
       <div className="relative container max-w-[80%] mx-auto px-4 py-16 md:py-24 z-10">
@@ -174,7 +211,7 @@ export default function HeroSection() {
                 <span className="sr-only">GitHub</span>
               </Link>
               <Link
-                href="https://linkedin.com/in/yourusername"
+                href="https://www.linkedin.com/in/-yuvraj08/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
@@ -198,18 +235,17 @@ export default function HeroSection() {
               {/* Decorative elements */}
               <div
                 ref={orbitalRing1Ref}
-                className="absolute -z-10 w-72 h-72 rounded-full border border-slate-700"
+                className="absolute -z-10 w-72 h-72 rounded-full border border-slate-700/50"
               ></div>
               <div
                 ref={orbitalRing2Ref}
-                className="absolute -z-10 w-80 h-80 rounded-full border border-slate-700"
+                className="absolute -z-10 w-80 h-80 rounded-full border border-slate-700/30"
               ></div>
 
               {/* Profile image */}
-              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800 shadow-xl">
+              <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-slate-800/80 shadow-xl">
                 <Image
                   src="https://static.vecteezy.com/system/resources/thumbnails/052/043/661/small_2x/young-man-with-glasses-and-black-jacket-works-on-a-laptop-3d-icon-isolated-png.png"
-                  // src="https://png.pngtree.com/recommend-works/png-clipart/20250209/ourmid/pngtree-a-fashionable-young-man-wearing-glasses-png-image_15332439.png"
                   alt="Your Name"
                   fill
                   className="object-cover"
