@@ -23,7 +23,6 @@ import {
   FaCss3Alt,
   FaReact,
   FaNodeJs,
-  FaJava,
   FaCogs,
   FaRobot,
   FaLayerGroup,
@@ -187,13 +186,6 @@ export default function AboutPage() {
       category: "Backend",
     },
     {
-      name: "Java",
-      icon: <FaJava />,
-      color: "#007396",
-      bgColor: "rgba(0, 115, 150, 0.1)",
-      category: "Backend",
-    },
-    {
       name: "Firebase",
       icon: <SiFirebase />,
       color: "#FFCA28",
@@ -320,7 +312,7 @@ export default function AboutPage() {
       icon: <SiCloudinary />,
       color: "#3448C5",
       bgColor: "rgba(52, 72, 197, 0.1)",
-      category: "Media/Assets",
+      category: "Cloud/Deployment",
     },
   ];
 
@@ -790,15 +782,18 @@ export default function AboutPage() {
               <div className="timeline-item relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="md:text-right mr-5">
                   <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-sm font-medium text-white mb-4">
-                    2018 - 2022
+                    2020
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-white">
-                    Degree/Certification Name
+                    Secondary Education
                   </h3>
-                  <p className="text-slate-300">University/Platform Name</p>
+                  <p className="text-slate-300">
+                    Himalaya Public Sen. Sec. School, Makowal.
+                  </p>
                   <p className="text-slate-400 mt-4">
-                    Brief description of what you learned and accomplished
-                    during this educational experience.
+                    Completed foundational studies with a focus on mathematics
+                    and computer science. Developed strong analytical skills and
+                    a disciplined academic approach.
                   </p>
                 </div>
                 <div className="hidden md:block"></div>
@@ -814,17 +809,17 @@ export default function AboutPage() {
                 <div className="hidden md:block"></div>
                 <div className="ml-5">
                   <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-sm font-medium text-white mb-4">
-                    2022 - 2023
+                    2023
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-white">
-                    Junior Developer
+                    Bachelor Of Computer Applications (BCA)
                   </h3>
-                  <p className="text-slate-300">Company Name</p>
+                  <p className="text-slate-300">D.A.V College, Amritsar</p>
                   <p className="text-slate-400 mt-4">
-                    Worked on various web development projects using React,
-                    Next.js, and TypeScript. Collaborated with a team of
-                    designers and developers to deliver high-quality web
-                    applications.
+                    Gained hands-on experience in frontend development through
+                    multiple academic and personal projects using React,
+                    Next.js, and TypeScript. Collaborated in team settings,
+                    improving communication and project delivery skills.
                   </p>
                 </div>
 
@@ -838,16 +833,18 @@ export default function AboutPage() {
               <div className="timeline-item relative grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="md:text-right mr-5">
                   <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-sm font-medium text-white mb-4">
-                    2023
+                    2025
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-white">
-                    Advanced Frontend Course
+                    Masters Of Computer Applications (MCA)
                   </h3>
-                  <p className="text-slate-300">Online Platform</p>
+                  <p className="text-slate-300">
+                    Guru Nanak Dev University, Amritsar
+                  </p>
                   <p className="text-slate-400 mt-4">
-                    Completed an intensive course on advanced frontend
-                    development techniques, focusing on performance optimization
-                    and modern JavaScript frameworks.
+                    Specialized in advanced frontend and full-stack development,
+                    with a strong emphasis on performance optimization, scalable
+                    architecture, and modern JavaScript frameworks.
                   </p>
                 </div>
                 <div className="hidden md:block"></div>
@@ -863,16 +860,20 @@ export default function AboutPage() {
                 <div className="hidden md:block"></div>
                 <div className="ml-5">
                   <div className="inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-sm font-medium text-white mb-4">
-                    2023 - Present
+                    2024 - Present
                   </div>
                   <h3 className="text-xl font-bold mb-2 text-white">
                     Full Stack Developer
                   </h3>
-                  <p className="text-slate-300">Current Company</p>
+                  <p className="text-slate-300">
+                    Netweb Technologies, Amritsar
+                  </p>
                   <p className="text-slate-400 mt-4">
-                    Developing and maintaining web applications using Next.js,
-                    TypeScript, and Supabase. Implementing responsive designs
-                    and optimizing application performance.
+                    Building and maintaining production-grade web applications
+                    using Next.js, TypeScript, and Supabase. Focused on
+                    delivering responsive, accessible, and high-performance user
+                    interfaces while contributing to backend logic and database
+                    design.
                   </p>
                 </div>
 
@@ -902,7 +903,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-semibold text-white mb-6">
                   {category}
                 </h3>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 perspective-1000">
+                <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-6 perspective-1000">
                   {techStack
                     .filter((tech) => tech.category === category)
                     .map((tech) => (
@@ -920,7 +921,7 @@ export default function AboutPage() {
                         onMouseLeave={() => setHoveredTech(null)}
                       >
                         <div
-                          className="absolute inset-0 rounded-xl border border-slate-700 bg-slate-800/50 backdrop-blur-sm flex flex-col items-center justify-center p-4 transform-style-3d"
+                          className="absolute inset-0 rounded-xl border border-slate-700 bg-slate-800/50 backdrop-blur-sm flex flex-col !items-center !justify-center p-4 transform-style-3d"
                           style={{
                             backfaceVisibility: "hidden",
                             transform: "translateZ(0px)",
@@ -932,7 +933,7 @@ export default function AboutPage() {
                           >
                             {tech.icon}
                           </div>
-                          <span className="text-white font-medium text-lg">
+                          <span className="text-white font-medium text-lg !text-center">
                             {tech.name}
                           </span>
                         </div>
@@ -1000,16 +1001,19 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-white">
-                      Frontend Development Certification
+                      Responsive Web Design
                     </h3>
-                    <p className="text-slate-300 mb-2">Platform Name</p>
+                    <p className="text-slate-300 mb-2">FreeCodeCamp</p>
                     <p className="text-slate-400">
-                      Comprehensive certification covering modern frontend
-                      development techniques, responsive design, and JavaScript
-                      frameworks.
+                      Gained hands-on experience in building responsive websites
+                      using HTML5 and CSS3. Covered core topics such as semantic
+                      HTML, Flexbox, CSS Grid, and accessibility best practices.
+                      Built several projects including a tribute page, technical
+                      documentation site, product landing page, and personal
+                      portfolio — all mobile-first and fully responsive.
                     </p>
                     <div className="mt-4 inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-sm font-medium text-white">
-                      Issued: January 2023
+                      Issued: July 2022
                     </div>
                   </div>
                 </div>
@@ -1026,16 +1030,20 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-white">
-                      React & Next.js Mastery
+                      Career Camp | Front End | Full Stack Web Development
                     </h3>
-                    <p className="text-slate-300 mb-2">Platform Name</p>
+                    <p className="text-slate-300 mb-2"> Coding Ninjas</p>
                     <p className="text-slate-400">
-                      Advanced course covering React hooks, context API, Next.js
-                      server components, and performance optimization
-                      techniques.
+                      Mastered core frontend technologies including HTML5, CSS3,
+                      JavaScript (ES6+), and modern frontend architecture using
+                      React. Built responsive, accessible user interfaces and
+                      learned advanced patterns like component-driven
+                      development, state management, and frontend routing.
+                      Emphasized performance optimization, cross-browser
+                      compatibility, and user-centric design.
                     </p>
                     <div className="mt-4 inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-sm font-medium text-white">
-                      Issued: March 2023
+                      Issued: Dec 2022
                     </div>
                   </div>
                 </div>
@@ -1052,16 +1060,19 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-white">
-                      TypeScript Advanced Concepts
+                      Career Camp | React
                     </h3>
-                    <p className="text-slate-300 mb-2">Platform Name</p>
+                    <p className="text-slate-300 mb-2">Coding Ninjas</p>
                     <p className="text-slate-400">
-                      Deep dive into TypeScript`s type system, generics, utility
-                      types, and integration with React and Next.js
-                      applications.
+                      In-depth specialization in React.js, covering hooks,
+                      context API, React Router, and Redux for state management.
+                      Built modular, maintainable UI components and integrated
+                      APIs to build dynamic, SPA-style applications. Also
+                      covered debugging, testing, and performance best practices
+                      for production-ready React apps.
                     </p>
                     <div className="mt-4 inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-sm font-medium text-white">
-                      Issued: June 2023
+                      Issued: July 2023
                     </div>
                   </div>
                 </div>
@@ -1078,16 +1089,21 @@ export default function AboutPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-2 text-white">
-                      UI/UX Design Fundamentals
+                      Career Camp | Back End | Full Stack Web Development in
+                      Node.js
                     </h3>
-                    <p className="text-slate-300 mb-2">Platform Name</p>
+                    <p className="text-slate-300 mb-2">Coding Ninjas</p>
                     <p className="text-slate-400">
-                      Comprehensive course on user interface design principles,
-                      user experience best practices, and design systems
-                      implementation.
+                      Focused on backend development using Node.js, Express, and
+                      MongoDB. Gained hands-on experience with RESTful API
+                      design, middleware, authentication using JWT, and database
+                      modeling with Mongoose. Built full-stack applications and
+                      implemented end-to-end features, including secure user
+                      authentication, CRUD operations, and deployment
+                      strategies.
                     </p>
                     <div className="mt-4 inline-block px-3 py-1 rounded-full bg-gradient-to-r from-purple-500/20 to-blue-500/20 text-sm font-medium text-white">
-                      Issued: September 2023
+                      Issued: May 2023
                     </div>
                   </div>
                 </div>
@@ -1126,13 +1142,7 @@ export default function AboutPage() {
 
               <div className="w-full md:w-2/3">
                 <p className="text-xl text-slate-300 leading-relaxed">
-                  I believe in{" "}
-                  <span className="text-white font-medium">
-                    continuous learning, problem-solving, and collaboration
-                  </span>
-                  . Whether it`s contributing to open-source projects or working
-                  on real-world applications, I`m always excited to push my
-                  limits and explore new technologies.
+                  I believe in building purposeful and efficient solutions through continuous learning and hands-on execution. My focus is on writing clean, scalable code, staying aligned with modern best practices, and contributing meaningfully—whether in a team setting or through independent projects.
                 </p>
                 <div className="mt-8 grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="philosophy-value flex items-center gap-2">

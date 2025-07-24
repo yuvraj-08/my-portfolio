@@ -8,18 +8,19 @@ import {
   Mail,
   Send,
   MapPin,
-  Phone,
-  Calendar,
+  // Phone,
+  // Calendar,
   ArrowRight,
   CheckCircle,
   AlertCircle,
   FileText,
-  Twitter,
   Instagram,
 } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useForm } from "react-hook-form";
+import { BsYoutube } from "react-icons/bs";
+import emailjs from "@emailjs/browser";
 
 // Register GSAP plugins
 if (typeof window !== "undefined") {
@@ -62,25 +63,43 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      // Simulate API call with timeout
-      await new Promise((resolve) => setTimeout(resolve, 1500));
+      // Send email to yourself (you receive the form content)
+      await emailjs.send(
+        "service_04vximp",
+        "template_prhs3ej",
+        {
+          name: data.name,
+          email: data.email,
+          subject: data.subject,
+          message: data.message,
+          time: new Date().toLocaleString(), // optional
+        },
+        "W5Z94UZeg_ngq8-8A"
+      );
 
-      // In a real application, you would send the form data to your backend or a form service
-      console.log("Form submitted:", data);
+      // Send confirmation email to client
+      await emailjs.send(
+        "service_04vximp",
+        "template_hcij30v",
+        {
+          name: data.name,
+          email: data.email,
+          message: data.message,
+          time: new Date().toLocaleString(),
+        },
+        "W5Z94UZeg_ngq8-8A"
+      );
 
-      // Show success message
       setFormStatus("success");
-      reset(); // Reset form fields
+      reset();
 
-      // Reset form status after 5 seconds
       setTimeout(() => {
         setFormStatus("idle");
       }, 5000);
     } catch (error) {
-      console.error("Error submitting form:", error);
+      console.error("Email sending failed:", error);
       setFormStatus("error");
 
-      // Reset form status after 5 seconds
       setTimeout(() => {
         setFormStatus("idle");
       }, 5000);
@@ -469,10 +488,10 @@ export default function ContactPage() {
                         Email
                       </h3>
                       <a
-                        href="mailto:your.email@example.com"
+                        href="mailto:contact.yuvraj08@gmail.com"
                         className="text-slate-300 hover:text-purple-400 transition-colors"
                       >
-                        your.email@example.com
+                        contact.yuvraj08@gmail.com
                       </a>
                     </div>
                   </div>
@@ -485,12 +504,10 @@ export default function ContactPage() {
                       <h3 className="text-lg font-medium text-white mb-1">
                         Location
                       </h3>
-                      <p className="text-slate-300">
-                        San Francisco, California, USA
-                      </p>
+                      <p className="text-slate-300">Amritsar, Punjab, India</p>
                     </div>
                   </div>
-
+                  {/* 
                   <div className="info-item flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
                       <Phone className="w-5 h-5 text-cyan-400" />
@@ -506,9 +523,9 @@ export default function ContactPage() {
                         +1 (123) 456-7890
                       </a>
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div className="info-item flex items-start gap-4">
+                  {/* <div className="info-item flex items-start gap-4">
                     <div className="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center flex-shrink-0">
                       <Calendar className="w-5 h-5 text-purple-400" />
                     </div>
@@ -520,7 +537,7 @@ export default function ContactPage() {
                         Monday - Friday, 9:00 AM - 6:00 PM PST
                       </p>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
@@ -535,7 +552,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   <Link
-                    href="https://github.com/yourusername"
+                    href="https://github.com/yuvraj-08"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-item group flex flex-col items-center gap-3 p-4 rounded-lg bg-slate-800/70 hover:bg-slate-700/70 border border-slate-700 transition-all"
@@ -563,21 +580,21 @@ export default function ContactPage() {
                   </Link>
 
                   <Link
-                    href="https://twitter.com/yourusername"
+                    href="https://www.youtube.com/@YuvrajSingh-08"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-item group flex flex-col items-center gap-3 p-4 rounded-lg bg-slate-800/70 hover:bg-slate-700/70 border border-slate-700 transition-all"
                   >
                     <div className="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center group-hover:bg-slate-600 transition-colors">
-                      <Twitter className="w-6 h-6 text-white" />
+                      <BsYoutube className="w-6 h-6 text-white" />
                     </div>
                     <span className="text-slate-300 group-hover:text-white transition-colors">
-                      Twitter
+                      Youtube
                     </span>
                   </Link>
 
                   <Link
-                    href="https://instagram.com/yourusername"
+                    href="https://www.instagram.com/u_v.1707/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="social-item group flex flex-col items-center gap-3 p-4 rounded-lg bg-slate-800/70 hover:bg-slate-700/70 border border-slate-700 transition-all"
@@ -591,7 +608,7 @@ export default function ContactPage() {
                   </Link>
 
                   <Link
-                    href="mailto:your.email@example.com"
+                    href="mailto:contact.yuvraj08@gmail.com"
                     className="social-item group flex flex-col items-center gap-3 p-4 rounded-lg bg-slate-800/70 hover:bg-slate-700/70 border border-slate-700 transition-all"
                   >
                     <div className="w-12 h-12 rounded-full bg-slate-700 flex items-center justify-center group-hover:bg-slate-600 transition-colors">
