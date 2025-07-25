@@ -471,7 +471,7 @@ export default function ContactPage() {
             </div>
 
             {/* Contact Info */}
-            <div ref={infoRef} className="space-y-8">
+            <div ref={infoRef} className="space-y-6">
               {/* Contact details */}
               <div className="bg-slate-800/30 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-slate-700">
                 <h2 className="text-2xl font-bold mb-6 text-white">
@@ -620,7 +620,8 @@ export default function ContactPage() {
                   </Link>
 
                   <Link
-                    href="/resume.pdf"
+                    href="/Resume.pdf"
+                    download
                     target="_blank"
                     className="social-item group flex flex-col items-center gap-3 p-4 rounded-lg bg-slate-800/70 hover:bg-slate-700/70 border border-slate-700 transition-all"
                   >

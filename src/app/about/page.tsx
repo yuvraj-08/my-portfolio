@@ -606,7 +606,7 @@ export default function AboutPage() {
 
               <div className="flex gap-5 pt-4">
                 <Link
-                  href="https://github.com/yourusername"
+                  href="https://github.com/yuvraj-08"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="social-icon text-slate-400 hover:text-white transition-colors"
@@ -624,7 +624,7 @@ export default function AboutPage() {
                   <span className="sr-only">LinkedIn</span>
                 </Link>
                 <Link
-                  href="mailto:your.email@example.com"
+                  href="mailto:contact.yuvraj08@gmail.com"
                   className="social-icon text-slate-400 hover:text-white transition-colors"
                 >
                   <Mail className="w-6 h-6" />

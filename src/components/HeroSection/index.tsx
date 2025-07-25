@@ -202,7 +202,7 @@ export default function HeroSection() {
 
             <div className="flex gap-5 pt-4">
               <Link
-                href="https://github.com/yourusername"
+                href="https://github.com/yuvraj-08"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-white transition-colors"
@@ -220,7 +220,7 @@ export default function HeroSection() {
                 <span className="sr-only">LinkedIn</span>
               </Link>
               <Link
-                href="mailto:your.email@example.com"
+                href="mailto:contact.yuvraj08@gmail.com"
                 className="text-slate-400 hover:text-white transition-colors"
               >
                 <RiMailSendLine className="w-6 h-6" />
@@ -274,7 +274,7 @@ export default function HeroSection() {
           </div>
           <div className="text-center">
             <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-cyan-400">
-              50+
+              30+
             </div>
             <div className="text-slate-400 mt-1">Projects Completed</div>
           </div>

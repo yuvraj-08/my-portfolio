@@ -140,7 +140,7 @@ export default function ContactCTA() {
             </Link>
 
             <Link
-              href="https://github.com/yourusername"
+              href="https://github.com/yuvraj-08"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex flex-col items-center gap-2 text-slate-300 hover:text-white transition-colors"
@@ -153,7 +153,7 @@ export default function ContactCTA() {
             </Link>
 
             <Link
-              href="mailto:your.email@example.com"
+              href="mailto:contact.yuvraj08@gmail.com"
               className="group flex flex-col items-center gap-2 text-slate-300 hover:text-white transition-colors"
               aria-label="Email Me"
             >
